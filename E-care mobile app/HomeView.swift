@@ -8,11 +8,20 @@
 import SwiftUI
 
 struct HomeView: View {
+    let columns = [GridItem(.flexible(), spacing: 20), GridItem(.flexible(), spacing: 20)]
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ScrollView {
+            LazyHGrid(rows: columns, spacing: 20) {
+                ActivityCard()
+                ActivityCard()
+            }
+            .padding()
+        }
     }
 }
 
 #Preview {
     HomeView()
 }
+

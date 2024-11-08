@@ -7,9 +7,103 @@
 
 import SwiftUI
 
+
+
 struct AddAppointmentView: View {
+    @State private var title = ""
+    @State private var location = ""
+    @State private var date = Date()
+    @State private var notes = ""
+    @State private var errorMessage = ""
+    @State private var isShowingConfirmation = false
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            ScrollView {
+                VStack(spacing: 20) {
+                    Text("Add New Appointment")
+                        .font(.title)
+                        .fontWeight(.bold)
+                    
+                    // Title Field
+                    TextField("Appointment Title", text: $title)
+                        .padding()
+                        .background(Color.gray.opacity(0.2))
+                        .cornerRadius(8)
+                        .autocapitalization(.words)
+                        .disableAutocorrection(true)
+                    
+                    // Location Field
+                    TextField("Location", text: $location)
+                        .padding()
+                        .background(Color.gray.opacity(0.2))
+                        .cornerRadius(8)
+                        .autocapitalization(.words)
+                        .disableAutocorrection(true)
+                    
+                    // Date Picker
+                    DatePicker("Date & Time", selection: $date, displayedComponents: [.date, .hourAndMinute])
+                        .padding()
+                        .background(Color.gray.opacity(0.2))
+                        .cornerRadius(8)
+                    
+                    // Notes Field
+                    TextField("Notes (optional)", text: $notes)
+                        .padding()
+                        .background(Color.gray.opacity(0.2))
+                        .cornerRadius(8)
+                        .autocapitalization(.sentences)
+                        .disableAutocorrection(true)
+                    
+                    // Error Message
+                    if !errorMessage.isEmpty {
+                        Text(errorMessage)
+                            .foregroundColor(.red)
+                            .padding(.top, 10)
+                    }
+                    
+                    // Save Button
+                    Button(action: {
+                        addAppointment()
+                    }) {
+                        Text("Save Appointment")
+                            .foregroundColor(.white)
+                            .frame(maxWidth: .infinity)
+                            .padding()
+                            .background(Color.blue)
+                            .cornerRadius(8)
+                    }
+                    .padding(.top, 10)
+                    .alert("Appointment Added", isPresented: $isShowingConfirmation) {
+                        Button("OK", role: .cancel) { }
+                    } message: {
+                        Text("Your appointment has been added successfully!")
+                    }
+                    
+                    Spacer()
+                }
+                .padding()
+            }
+            .navigationTitle("Add Appointment")
+            .navigationBarTitleDisplayMode(.inline)
+        }
+    }
+    
+    // Add Appointment Logic
+    func addAppointment() {
+        // Clear previous error
+        errorMessage = ""
+        
+        // Validation
+        guard !title.isEmpty, !location.isEmpty else {
+            errorMessage = "Please fill in all required fields."
+            return
+        }
+        
+        // Code to save the appointment (e.g., saving to a database or cloud service)
+        
+        // Show confirmation alert
+        isShowingConfirmation = true
     }
 }
 

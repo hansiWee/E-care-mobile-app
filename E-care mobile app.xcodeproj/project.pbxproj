@@ -14,6 +14,22 @@
 		3ABE15552CDDD2BB0017417F /* E_care_mobile_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABE15542CDDD2BB0017417F /* E_care_mobile_appTests.swift */; };
 		3ABE155F2CDDD2BB0017417F /* E_care_mobile_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABE155E2CDDD2BB0017417F /* E_care_mobile_appUITests.swift */; };
 		3ABE15612CDDD2BB0017417F /* E_care_mobile_appUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABE15602CDDD2BB0017417F /* E_care_mobile_appUITestsLaunchTests.swift */; };
+		3ABE156E2CDDD46A0017417F /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABE156D2CDDD46A0017417F /* SignUp.swift */; };
+		3ABE15732CDDF0D40017417F /* beActiveTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABE15722CDDF0D40017417F /* beActiveTabView.swift */; };
+		3ABE15752CDDF1D40017417F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABE15742CDDF1D40017417F /* HomeView.swift */; };
+		3ABE15822CDE0C600017417F /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABE15812CDE0C600017417F /* WelcomeView.swift */; };
+		3ABE15842CDE0DF40017417F /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABE15832CDE0DF40017417F /* DashboardView.swift */; };
+		3ABE15872CDE0EAA0017417F /* DateButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABE15862CDE0EAA0017417F /* DateButton.swift */; };
+		3ABE15892CDE0EFA0017417F /* AppointmentCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABE15882CDE0EFA0017417F /* AppointmentCard.swift */; };
+		3ABE158B2CDE133E0017417F /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABE158A2CDE133E0017417F /* MainView.swift */; };
+		3ABE158D2CDE137E0017417F /* HealthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABE158C2CDE137E0017417F /* HealthView.swift */; };
+		3ABE158F2CDE13950017417F /* AddAppointmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABE158E2CDE13950017417F /* AddAppointmentView.swift */; };
+		3ABE15912CDE13B40017417F /* NotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABE15902CDE13B40017417F /* NotificationsView.swift */; };
+		3ABE15952CDE13DC0017417F /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABE15942CDE13DC0017417F /* ProfileView.swift */; };
+		3ABE159A2CDE18520017417F /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABE15992CDE18520017417F /* SignUpView.swift */; };
+		3ABE159C2CDE18CF0017417F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABE159B2CDE18CF0017417F /* LoginView.swift */; };
+		3ABE159E2CDE19250017417F /* PasswordRest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABE159D2CDE19250017417F /* PasswordRest.swift */; };
+		3ABE15A12CDE19950017417F /* ActivityCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABE15A02CDE19950017417F /* ActivityCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +60,23 @@
 		3ABE155A2CDDD2BB0017417F /* E-care mobile appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "E-care mobile appUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ABE155E2CDDD2BB0017417F /* E_care_mobile_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = E_care_mobile_appUITests.swift; sourceTree = "<group>"; };
 		3ABE15602CDDD2BB0017417F /* E_care_mobile_appUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = E_care_mobile_appUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3ABE156D2CDDD46A0017417F /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
+		3ABE15722CDDF0D40017417F /* beActiveTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = beActiveTabView.swift; sourceTree = "<group>"; };
+		3ABE15742CDDF1D40017417F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		3ABE157E2CDE058F0017417F /* E-care mobile appRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "E-care mobile appRelease.entitlements"; sourceTree = "<group>"; };
+		3ABE15812CDE0C600017417F /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		3ABE15832CDE0DF40017417F /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		3ABE15862CDE0EAA0017417F /* DateButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateButton.swift; sourceTree = "<group>"; };
+		3ABE15882CDE0EFA0017417F /* AppointmentCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentCard.swift; sourceTree = "<group>"; };
+		3ABE158A2CDE133E0017417F /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		3ABE158C2CDE137E0017417F /* HealthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthView.swift; sourceTree = "<group>"; };
+		3ABE158E2CDE13950017417F /* AddAppointmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAppointmentView.swift; sourceTree = "<group>"; };
+		3ABE15902CDE13B40017417F /* NotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsView.swift; sourceTree = "<group>"; };
+		3ABE15942CDE13DC0017417F /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		3ABE15992CDE18520017417F /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		3ABE159B2CDE18CF0017417F /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		3ABE159D2CDE19250017417F /* PasswordRest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordRest.swift; sourceTree = "<group>"; };
+		3ABE15A02CDE19950017417F /* ActivityCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,10 +127,20 @@
 		3ABE15422CDDD2BA0017417F /* E-care mobile app */ = {
 			isa = PBXGroup;
 			children = (
+				3ABE157E2CDE058F0017417F /* E-care mobile appRelease.entitlements */,
 				3ABE15432CDDD2BA0017417F /* E_care_mobile_appApp.swift */,
 				3ABE15452CDDD2BA0017417F /* ContentView.swift */,
 				3ABE15472CDDD2BB0017417F /* Assets.xcassets */,
 				3ABE15492CDDD2BB0017417F /* Preview Content */,
+				3ABE156D2CDDD46A0017417F /* SignUp.swift */,
+				3ABE15722CDDF0D40017417F /* beActiveTabView.swift */,
+				3ABE15742CDDF1D40017417F /* HomeView.swift */,
+				3ABE15812CDE0C600017417F /* WelcomeView.swift */,
+				3ABE158A2CDE133E0017417F /* MainView.swift */,
+				3ABE158C2CDE137E0017417F /* HealthView.swift */,
+				3ABE158E2CDE13950017417F /* AddAppointmentView.swift */,
+				3ABE15902CDE13B40017417F /* NotificationsView.swift */,
+				3ABE15942CDE13DC0017417F /* ProfileView.swift */,
 			);
 			path = "E-care mobile app";
 			sourceTree = "<group>";
@@ -105,6 +148,9 @@
 		3ABE15492CDDD2BB0017417F /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				3ABE159F2CDE19790017417F /* Helth View */,
+				3ABE15962CDE17DB0017417F /* SignUp&Login */,
+				3ABE15852CDE0E7A0017417F /* Dash board */,
 				3ABE154A2CDDD2BB0017417F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -125,6 +171,34 @@
 				3ABE15602CDDD2BB0017417F /* E_care_mobile_appUITestsLaunchTests.swift */,
 			);
 			path = "E-care mobile appUITests";
+			sourceTree = "<group>";
+		};
+		3ABE15852CDE0E7A0017417F /* Dash board */ = {
+			isa = PBXGroup;
+			children = (
+				3ABE15832CDE0DF40017417F /* DashboardView.swift */,
+				3ABE15862CDE0EAA0017417F /* DateButton.swift */,
+				3ABE15882CDE0EFA0017417F /* AppointmentCard.swift */,
+			);
+			path = "Dash board";
+			sourceTree = "<group>";
+		};
+		3ABE15962CDE17DB0017417F /* SignUp&Login */ = {
+			isa = PBXGroup;
+			children = (
+				3ABE15992CDE18520017417F /* SignUpView.swift */,
+				3ABE159B2CDE18CF0017417F /* LoginView.swift */,
+				3ABE159D2CDE19250017417F /* PasswordRest.swift */,
+			);
+			path = "SignUp&Login";
+			sourceTree = "<group>";
+		};
+		3ABE159F2CDE19790017417F /* Helth View */ = {
+			isa = PBXGroup;
+			children = (
+				3ABE15A02CDE19950017417F /* ActivityCard.swift */,
+			);
+			path = "Helth View";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +331,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3ABE158F2CDE13950017417F /* AddAppointmentView.swift in Sources */,
 				3ABE15462CDDD2BA0017417F /* ContentView.swift in Sources */,
+				3ABE158B2CDE133E0017417F /* MainView.swift in Sources */,
+				3ABE15732CDDF0D40017417F /* beActiveTabView.swift in Sources */,
+				3ABE15A12CDE19950017417F /* ActivityCard.swift in Sources */,
+				3ABE15892CDE0EFA0017417F /* AppointmentCard.swift in Sources */,
+				3ABE15822CDE0C600017417F /* WelcomeView.swift in Sources */,
+				3ABE15842CDE0DF40017417F /* DashboardView.swift in Sources */,
+				3ABE15952CDE13DC0017417F /* ProfileView.swift in Sources */,
+				3ABE156E2CDDD46A0017417F /* SignUp.swift in Sources */,
+				3ABE15752CDDF1D40017417F /* HomeView.swift in Sources */,
 				3ABE15442CDDD2BA0017417F /* E_care_mobile_appApp.swift in Sources */,
+				3ABE15912CDE13B40017417F /* NotificationsView.swift in Sources */,
+				3ABE159E2CDE19250017417F /* PasswordRest.swift in Sources */,
+				3ABE15872CDE0EAA0017417F /* DateButton.swift in Sources */,
+				3ABE159C2CDE18CF0017417F /* LoginView.swift in Sources */,
+				3ABE159A2CDE18520017417F /* SignUpView.swift in Sources */,
+				3ABE158D2CDE137E0017417F /* HealthView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,6 +537,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "E-care mobile app/E-care mobile appRelease.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"E-care mobile app/Preview Content\"";

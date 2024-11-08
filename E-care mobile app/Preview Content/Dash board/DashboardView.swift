@@ -74,7 +74,6 @@ struct DashboardView: View {
                         .clipped()
                         .padding(.horizontal)
                     
-                 
                     // Calendar Section
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack(spacing: 15) {
@@ -85,29 +84,44 @@ struct DashboardView: View {
                         .padding()
                     }
                     
+                    // Activity Cards Section
+                    // Activity Cards Section
+                    VStack(alignment: .leading) {
+                        Text("Today's Activities")
+                            .font(.headline)
+                            .padding(.horizontal)
+                        
+                        ScrollView(.horizontal, showsIndicators: false) {
+                            HStack(spacing: 15) {
+                                ActivityCard()
+                                
+                                ActivityCard()}
+                            .padding(.horizontal)
+                        }
+                    }
+                    .padding(.bottom, 20) // Added bottom padding to separate the sections
+
                     // Appointments Section
                     VStack(alignment: .leading) {
                         Text("My Appointments")
                             .font(.headline)
                             .padding(.horizontal)
+
                         
                         ScrollView {
                             VStack(spacing: 15) {
                                 ForEach(0..<3) { index in
                                     AppointmentCard(doctorName: "Dr. Olivia Turner, M.D.", specialization: "Dermato-Endocrinology", time: "10:00 AM")
+                                        .padding() // Add padding around the card
+                                        .background(Color.white) // Ensure background is white to show shadow
+                                        .cornerRadius(10)
+                                        .shadow(color: .gray, radius: 5, x: 0, y: 2) // Apply shadow
                                 }
                             }
                         }
-                        .padding(.horizontal)
                     }
                 }
-                .frame(maxWidth: .infinity) // Make VStack take full width
-                .padding(.vertical) // Add padding around main content
             }
-            
-            // Custom Tab Bar
-            CustomTabBar(selectedTab: $selectedTab)
-                .background(Color.white.shadow(radius: 5))
         }
         .edgesIgnoringSafeArea(.bottom)
         .onAppear {
@@ -138,6 +152,7 @@ struct DashboardView: View {
         task.resume()
     }
 }
+
 
 #Preview {
     DashboardView()
