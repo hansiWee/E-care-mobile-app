@@ -12,7 +12,7 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
-            SimpleFormView()  // This is your starting view
+            WelcomeView()  // This is your starting view
         }
     }
 }

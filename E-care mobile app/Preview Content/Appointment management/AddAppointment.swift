@@ -1,10 +1,3 @@
-//
-//  AddAppointment.swift
-//  E-care mobile app
-//
-//  Created by COCOBSCCOMPY4231P-035 on 2024-11-09.
-//
-
 import SwiftUI
 
 struct AppointmentView: View {
@@ -18,23 +11,6 @@ struct AppointmentView: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
-            // Header Section
-            HStack {
-                Image(systemName: "bell")
-                Spacer()
-                VStack(alignment: .leading) {
-                    Text("Hi, Welcome Back")
-                        .font(.caption)
-                    Text("Hansi Wee")
-                        .font(.headline)
-                }
-                Spacer()
-                Image(systemName: "person.circle.fill")
-                    .resizable()
-                    .frame(width: 50, height: 50)
-            }
-            .padding()
-
             // Appointment Name
             Text("Appointment name")
                 .font(.headline)
@@ -103,27 +79,12 @@ struct AppointmentView: View {
                     .foregroundColor(.white)
                     .cornerRadius(10)
             }
-
-            // Bottom Navigation
-            HStack {
-                Spacer()
-                Image(systemName: "house.fill")
-                Spacer()
-                Image(systemName: "heart.fill")
-                Spacer()
-                Image(systemName: "calendar")
-                Spacer()
-                Image(systemName: "message.fill")
-                Spacer()
-            }
-            .padding()
-            .background(Color.blue.opacity(0.2))
         }
         .padding()
     }
 }
 
-
 #Preview {
     AppointmentView()
 }
+

@@ -1,15 +1,13 @@
-//
-//  DashboardView.swift
-//  E-care mobile app
-//
-//  Created by COCOBSCCOMPY4231P-035 on 2024-11-08.
-//
-
 import SwiftUI
+import Firebase
+import FirebaseAuth
+import FirebaseFirestore
 
 struct UserProfile: Codable {
-    var username: String
-    var profileImageUrl: String // URL to the user's profile image
+    var email: String
+    var fullName: String
+    var mobileNumber: String
+    var profileImageUrl: String
 }
 
 struct DashboardView: View {
@@ -35,7 +33,7 @@ struct DashboardView: View {
                                 .fontWeight(.bold)
                             
                             if let userProfile = userProfile {
-                                Text(userProfile.username) // Display fetched username
+                                Text(userProfile.fullName) // Display fetched full name
                                     .font(.headline)
                             } else {
                                 Text("Loading...") // Placeholder while loading
@@ -45,8 +43,8 @@ struct DashboardView: View {
                         Spacer()
                         
                         if let userProfile = userProfile {
-                            // Display user's profile image fetched from API
-                            AsyncImage(url: URL(string: userProfile.profileImageUrl)) { image in
+                            // Use a static profile image
+                            AsyncImage(url: URL(string: "defaultProfileImageURL")) { image in
                                 image.resizable()
                                     .scaledToFill()
                                     .frame(width: 50, height: 50)
@@ -63,6 +61,7 @@ struct DashboardView: View {
                                 .clipShape(Circle())
                                 .foregroundColor(.gray)
                         }
+
                     }
                     .padding(.horizontal)
 
@@ -84,18 +83,58 @@ struct DashboardView: View {
                         .padding()
                     }
                     
-                    // Activity Cards Section
+                    HStack(spacing: 15) { // Horizontal stack with spacing between buttons
+                        Button(action: {
+                            print("AI Assistance Button Pressed")
+                        }) {
+                            VStack {
+                                Image(systemName: "brain.head.profile") // Icon for AI Assistance
+                                    .font(.title) // Icon size
+                                Text("AI Doctor Help")
+                                    .font(.system(size: 15)) // Set font size to 15
+                                    .fontWeight(.semibold)
+                            }
+                            .foregroundColor(.white)
+                            .padding()
+                            .frame(width: 170, height: 100) // Fixed width and height for equal sizing
+                            .background(Color.blue)
+                            .cornerRadius(10)
+                            .shadow(radius: 5)
+                        }
+                        
+                        Button(action: {
+                            print("My Appointment")
+                        }) {
+                            VStack {
+                                Image(systemName: "calendar") // Icon for My Appointments
+                                    .font(.title) // Icon size
+                                Text("My Appointments")
+                                    .font(.system(size: 15)) // Set font size to 15
+                                    .fontWeight(.semibold)
+                            }
+                            .foregroundColor(.white)
+                            .padding()
+                            .frame(width: 170, height: 100) // Fixed width and height for equal sizing
+                            .background(Color.blue)
+                            .cornerRadius(10)
+                            .shadow(radius: 5)
+                        }
+                    }
+                    .padding(.horizontal)
+                    .padding(.top, 10)
+
+                    
                     // Activity Cards Section
                     VStack(alignment: .leading) {
-                        Text("Today's Activities")
+                        Text("Digital Health Insight")
                             .font(.headline)
                             .padding(.horizontal)
-                        
+                        Spacer()
                         ScrollView(.horizontal, showsIndicators: false) {
                             HStack(spacing: 15) {
                                 ActivityCard()
-                                
-                                ActivityCard()}
+                                ActivityCard()
+                            }
                             .padding(.horizontal)
                         }
                     }
@@ -107,11 +146,10 @@ struct DashboardView: View {
                             .font(.headline)
                             .padding(.horizontal)
 
-                        
                         ScrollView {
                             VStack(spacing: 15) {
                                 ForEach(0..<3) { index in
-                                    AppointmentCard(doctorName: "Dr. Olivia Turner, M.D.", specialization: "Dermato-Endocrinology", time: "10:00 AM")
+                                    AppointmentCard(doctorName: "Dr. Olivia Turner, M.D.", specialization: "Dermato-Endocrinology")
                                         .padding() // Add padding around the card
                                         .background(Color.white) // Ensure background is white to show shadow
                                         .cornerRadius(10)
@@ -130,30 +168,38 @@ struct DashboardView: View {
         }
     }
     
-    // Fetch user profile from the backend API
+    // Fetch user profile from Firebase Firestore
     func fetchUserProfile() {
-        guard let url = URL(string: "https://your-api.com/user-profile") else { return }
-        
-        let task = URLSession.shared.dataTask(with: url) { data, response, error in
-            if let data = data, error == nil {
-                do {
-                    let decodedProfile = try JSONDecoder().decode(UserProfile.self, from: data)
-                    DispatchQueue.main.async {
-                        self.userProfile = decodedProfile
-                        self.isLoading = false
-                    }
-                } catch {
-                    print("Failed to decode user profile: \(error)")
+        guard let userId = Auth.auth().currentUser?.uid else {
+            print("No user logged in.")
+            return
+        }
+
+        let db = Firestore.firestore()
+
+        db.collection("users").document(userId).getDocument { document, error in
+            if let document = document, document.exists {
+                // Fetch user data from Firestore
+                let data = document.data()
+                let email = data?["email"] as? String ?? ""
+                let fullName = data?["fullName"] as? String ?? ""
+                let mobileNumber = data?["mobileNumber"] as? String ?? ""
+
+                DispatchQueue.main.async {
+                    // Use a static image for the profile
+                    self.userProfile = UserProfile(email: email, fullName: fullName, mobileNumber: mobileNumber, profileImageUrl: "defaultProfileImageURL")
+                    self.isLoading = false
                 }
             } else {
-                print("Failed to fetch user profile: \(error?.localizedDescription ?? "Unknown error")")
+                print("Document does not exist or error: \(error?.localizedDescription ?? "Unknown error")")
             }
         }
-        task.resume()
     }
+
 }
 
 
 #Preview {
     DashboardView()
 }
+

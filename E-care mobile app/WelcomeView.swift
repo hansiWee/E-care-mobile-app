@@ -29,7 +29,7 @@ struct WelcomeView: View {
 
                 Spacer()
 
-                NavigationLink(destination: MainView()) {
+                NavigationLink(destination: LoginView()) {
                     Text("Let’s get started!")
                         .fontWeight(.bold)
                         .padding()
