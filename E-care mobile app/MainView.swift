@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct MainView: View {
+    @Binding var isUserLoggedIn: Bool
     var body: some View {
         TabView {
             // Dashboard Tab
@@ -39,16 +40,16 @@ struct MainView: View {
                 }
             
             // Profile Tab
-            ProfileView()
-                .tabItem {
-                    Image(systemName: "person.fill") // Person icon for profile
-                    Text("Profile")
-                }
+            ProfileView(isUserLoggedIn: $isUserLoggedIn) // Pass the actual binding here
+                           .tabItem {
+                               Image(systemName: "person.fill") // Person icon for profile
+                               Text("Profile")
+                           }
         }
         .accentColor(.blue) // Change the active tab icon color (optional)
     }
 }
 
 #Preview {
-    MainView()
+    MainView(isUserLoggedIn: .constant(false))
 }

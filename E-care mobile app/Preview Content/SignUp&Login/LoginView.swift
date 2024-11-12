@@ -15,7 +15,7 @@ struct LoginView: View {
     var body: some View {
         Group {
             if isLoggedIn {
-                MainView() // Navigate to MainView when user is logged in
+                MainView(isUserLoggedIn: .constant(false)) // Navigate to MainView when user is logged in
             } else {
                 content
             }

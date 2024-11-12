@@ -9,9 +9,11 @@
 /* Begin PBXBuildFile section */
 		3A4CB32F2CE3183800E0F924 /* signInButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4CB32E2CE3183800E0F924 /* signInButton.swift */; };
 		3A4CB3352CE35DD700E0F924 /* BioDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4CB3342CE35DD700E0F924 /* BioDataView.swift */; };
-		3A4CB3382CE35F4200E0F924 /* PhoneNumberKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3A4CB3372CE35F4200E0F924 /* PhoneNumberKit */; settings = {ATTRIBUTES = (Required, ); }; };
-		3A4CB33A2CE35F6D00E0F924 /* PhoneNumberKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 3A4CB3392CE35F6D00E0F924 /* PhoneNumberKit-Dynamic */; };
-		3A4CB33C2CE35F6D00E0F924 /* PhoneNumberKit-Static in Frameworks */ = {isa = PBXBuildFile; productRef = 3A4CB33B2CE35F6D00E0F924 /* PhoneNumberKit-Static */; };
+		3A4CB33E2CE38A4300E0F924 /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = 3A4CB33D2CE38A4300E0F924 /* FirebaseAppCheck */; };
+		3A4CB3402CE38A4300E0F924 /* FirebaseAppDistribution-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 3A4CB33F2CE38A4300E0F924 /* FirebaseAppDistribution-Beta */; };
+		3A4CB3432CE38D9900E0F924 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 3A4CB3422CE38D9900E0F924 /* FirebaseFirestore */; };
+		3A4CB3452CE38DB000E0F924 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 3A4CB3442CE38DB000E0F924 /* FirebaseStorage */; };
+		3A4CB3482CE38F3500E0F924 /* ImagePicker in Frameworks */ = {isa = PBXBuildFile; productRef = 3A4CB3472CE38F3500E0F924 /* ImagePicker */; };
 		3ABB39352CDF138400806D40 /* HealthDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABB39342CDF138400806D40 /* HealthDashboardView.swift */; };
 		3ABB39382CDF19B700806D40 /* SelectADoctor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABB39372CDF19B700806D40 /* SelectADoctor.swift */; };
 		3ABB393B2CDF24E700806D40 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 3ABB393A2CDF24E700806D40 /* FirebaseAuth */; };
@@ -102,11 +104,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A4CB33C2CE35F6D00E0F924 /* PhoneNumberKit-Static in Frameworks */,
-				3A4CB3382CE35F4200E0F924 /* PhoneNumberKit in Frameworks */,
 				3ABB393B2CDF24E700806D40 /* FirebaseAuth in Frameworks */,
+				3A4CB33E2CE38A4300E0F924 /* FirebaseAppCheck in Frameworks */,
 				3ABB393D2CDF24E700806D40 /* FirebaseFirestoreCombine-Community in Frameworks */,
-				3A4CB33A2CE35F6D00E0F924 /* PhoneNumberKit-Dynamic in Frameworks */,
+				3A4CB3432CE38D9900E0F924 /* FirebaseFirestore in Frameworks */,
+				3A4CB3482CE38F3500E0F924 /* ImagePicker in Frameworks */,
+				3A4CB3402CE38A4300E0F924 /* FirebaseAppDistribution-Beta in Frameworks */,
+				3A4CB3452CE38DB000E0F924 /* FirebaseStorage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,6 +140,13 @@
 			path = "Profile Management";
 			sourceTree = "<group>";
 		};
+		3A4CB3412CE38D9900E0F924 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3ABB39362CDF197E00806D40 /* Appointment management */ = {
 			isa = PBXGroup;
 			children = (
@@ -154,6 +165,7 @@
 				3ABE15532CDDD2BB0017417F /* E-care mobile appTests */,
 				3ABE155D2CDDD2BB0017417F /* E-care mobile appUITests */,
 				3ABE15412CDDD2BA0017417F /* Products */,
+				3A4CB3412CE38D9900E0F924 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -266,9 +278,11 @@
 			packageProductDependencies = (
 				3ABB393A2CDF24E700806D40 /* FirebaseAuth */,
 				3ABB393C2CDF24E700806D40 /* FirebaseFirestoreCombine-Community */,
-				3A4CB3372CE35F4200E0F924 /* PhoneNumberKit */,
-				3A4CB3392CE35F6D00E0F924 /* PhoneNumberKit-Dynamic */,
-				3A4CB33B2CE35F6D00E0F924 /* PhoneNumberKit-Static */,
+				3A4CB33D2CE38A4300E0F924 /* FirebaseAppCheck */,
+				3A4CB33F2CE38A4300E0F924 /* FirebaseAppDistribution-Beta */,
+				3A4CB3422CE38D9900E0F924 /* FirebaseFirestore */,
+				3A4CB3442CE38DB000E0F924 /* FirebaseStorage */,
+				3A4CB3472CE38F3500E0F924 /* ImagePicker */,
 			);
 			productName = "E-care mobile app";
 			productReference = 3ABE15402CDDD2BA0017417F /* E-care mobile app.app */;
@@ -344,7 +358,7 @@
 			mainGroup = 3ABE15372CDDD2BA0017417F;
 			packageReferences = (
 				3ABB39392CDF24E700806D40 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
-				3A4CB3362CE35F1200E0F924 /* XCRemoteSwiftPackageReference "PhoneNumberKit" */,
+				3A4CB3462CE38F3500E0F924 /* XCRemoteSwiftPackageReference "ImagePicker" */,
 			);
 			productRefGroup = 3ABE15412CDDD2BA0017417F /* Products */;
 			projectDirPath = "";
@@ -581,6 +595,7 @@
 				INFOPLIST_FILE = "E-care-mobile-app-Info.plist";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "We need to unlock your data";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Please allow access to upload pictures.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Please allow access to upload pictures.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -614,6 +629,7 @@
 				INFOPLIST_FILE = "E-care-mobile-app-Info.plist";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "We need to unlock your data";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Please allow access to upload pictures.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Please allow access to upload pictures.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -746,12 +762,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		3A4CB3362CE35F1200E0F924 /* XCRemoteSwiftPackageReference "PhoneNumberKit" */ = {
+		3A4CB3462CE38F3500E0F924 /* XCRemoteSwiftPackageReference "ImagePicker" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/marmelroy/PhoneNumberKit";
+			repositoryURL = "https://github.com/Hyperoslo/ImagePicker";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 4.0.0;
+				minimumVersion = 3.3.0;
 			};
 		};
 		3ABB39392CDF24E700806D40 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
@@ -765,20 +781,30 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		3A4CB3372CE35F4200E0F924 /* PhoneNumberKit */ = {
+		3A4CB33D2CE38A4300E0F924 /* FirebaseAppCheck */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 3A4CB3362CE35F1200E0F924 /* XCRemoteSwiftPackageReference "PhoneNumberKit" */;
-			productName = PhoneNumberKit;
+			package = 3ABB39392CDF24E700806D40 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAppCheck;
 		};
-		3A4CB3392CE35F6D00E0F924 /* PhoneNumberKit-Dynamic */ = {
+		3A4CB33F2CE38A4300E0F924 /* FirebaseAppDistribution-Beta */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 3A4CB3362CE35F1200E0F924 /* XCRemoteSwiftPackageReference "PhoneNumberKit" */;
-			productName = "PhoneNumberKit-Dynamic";
+			package = 3ABB39392CDF24E700806D40 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseAppDistribution-Beta";
 		};
-		3A4CB33B2CE35F6D00E0F924 /* PhoneNumberKit-Static */ = {
+		3A4CB3422CE38D9900E0F924 /* FirebaseFirestore */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 3A4CB3362CE35F1200E0F924 /* XCRemoteSwiftPackageReference "PhoneNumberKit" */;
-			productName = "PhoneNumberKit-Static";
+			package = 3ABB39392CDF24E700806D40 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		3A4CB3442CE38DB000E0F924 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3ABB39392CDF24E700806D40 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+		3A4CB3472CE38F3500E0F924 /* ImagePicker */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3A4CB3462CE38F3500E0F924 /* XCRemoteSwiftPackageReference "ImagePicker" */;
+			productName = ImagePicker;
 		};
 		3ABB393A2CDF24E700806D40 /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;

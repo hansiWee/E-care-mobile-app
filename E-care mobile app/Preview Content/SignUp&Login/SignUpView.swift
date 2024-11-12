@@ -8,6 +8,8 @@ struct SignUpView: View {
     @State private var email = ""
     @State private var password = ""
     @State private var mobileNumber = ""
+    @State private var gender = ""
+    @State private var birthDate = Date()
     @State private var errorMessage = ""
     @State private var isLoading = false
     @State private var offset: CGFloat = 0 // Offset for keyboard avoidance
@@ -16,7 +18,7 @@ struct SignUpView: View {
     var body: some View {
         Group {
             if isUserLoggedIn {
-                MainView() // Navigate to MainView when user is logged in
+                MainView(isUserLoggedIn: .constant(false)) // Navigate to MainView when user is logged in
             } else {
                 content
             }
@@ -57,6 +59,8 @@ struct SignUpView: View {
                         .cornerRadius(8)
                         .keyboardType(.phonePad)
                     
+                    
+                    
                     Toggle("I agree to Terms of Use and Privacy Policy", isOn: .constant(false))
                         .padding(.top, 10)
                     
@@ -86,7 +90,8 @@ struct SignUpView: View {
                     }
                     .padding(.top, 10)
                     
-                    Spacer()
+                    Text("or")
+                        .foregroundColor(.gray)
                     
                     // Continue with Apple action
                     SignInButton()
@@ -171,7 +176,9 @@ struct SignUpView: View {
                     db.collection("users").document(user.uid).setData([
                         "fullName": fullName,
                         "email": email,
-                        "mobileNumber": mobileNumber
+                        "mobileNumber": mobileNumber,
+                        "gender": gender,
+                        "birthDate": birthDate
                     ]) { error in
                         if let error = error {
                             errorMessage = "Failed to save user data: \(error.localizedDescription)"
@@ -187,5 +194,9 @@ struct SignUpView: View {
             }
         }
     }
+}
+
+#Preview {
+    SignUpView(isUserLoggedIn: .constant(false))
 }
 

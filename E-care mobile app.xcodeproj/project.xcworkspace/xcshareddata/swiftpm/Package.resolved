@@ -1,5 +1,5 @@
 {
-  "originHash" : "aafe3800de4ee931205fd636c050f7428a6b115ee2a440ca6c7931da79dfa5b8",
+  "originHash" : "7a1a9c9e3938dd70b8127efc25cfc91eb6ef406518b5d5b0c505109650f37bf5",
   "pins" : [
     {
       "identity" : "abseil-cpp-binary",
@@ -74,6 +74,15 @@
       }
     },
     {
+      "identity" : "imagepicker",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Hyperoslo/ImagePicker",
+      "state" : {
+        "revision" : "d8a8f840380b9a28230c8fcad277adb458706d0a",
+        "version" : "3.3.0"
+      }
+    },
+    {
       "identity" : "interop-ios-for-google-sdks",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/google/interop-ios-for-google-sdks.git",
@@ -98,15 +107,6 @@
       "state" : {
         "revision" : "b7e1104502eca3a213b46303391ca4d3bc8ddec1",
         "version" : "2.30910.0"
-      }
-    },
-    {
-      "identity" : "phonenumberkit",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/marmelroy/PhoneNumberKit",
-      "state" : {
-        "revision" : "28aee1bd9d4a8fa46304c598b73231b043161e63",
-        "version" : "4.0.0"
       }
     },
     {

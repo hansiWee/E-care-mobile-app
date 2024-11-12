@@ -91,7 +91,7 @@ struct AddAppointmentView: View {
                     .padding()
                     
                     // Navigation Link to MainView
-                    NavigationLink("", destination: MainView(), isActive: $navigateToMain)
+                    NavigationLink("", destination: MainView(isUserLoggedIn: .constant(false)), isActive: $navigateToMain)
                 }
                 .navigationTitle("Add Appointment")
                 .navigationBarTitleDisplayMode(.inline)
