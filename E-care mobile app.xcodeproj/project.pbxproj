@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A4CB32F2CE3183800E0F924 /* signInButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4CB32E2CE3183800E0F924 /* signInButton.swift */; };
+		3A4CB3352CE35DD700E0F924 /* BioDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4CB3342CE35DD700E0F924 /* BioDataView.swift */; };
+		3A4CB3382CE35F4200E0F924 /* PhoneNumberKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3A4CB3372CE35F4200E0F924 /* PhoneNumberKit */; settings = {ATTRIBUTES = (Required, ); }; };
+		3A4CB33A2CE35F6D00E0F924 /* PhoneNumberKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 3A4CB3392CE35F6D00E0F924 /* PhoneNumberKit-Dynamic */; };
+		3A4CB33C2CE35F6D00E0F924 /* PhoneNumberKit-Static in Frameworks */ = {isa = PBXBuildFile; productRef = 3A4CB33B2CE35F6D00E0F924 /* PhoneNumberKit-Static */; };
 		3ABB39352CDF138400806D40 /* HealthDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABB39342CDF138400806D40 /* HealthDashboardView.swift */; };
 		3ABB39382CDF19B700806D40 /* SelectADoctor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABB39372CDF19B700806D40 /* SelectADoctor.swift */; };
 		3ABB393B2CDF24E700806D40 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 3ABB393A2CDF24E700806D40 /* FirebaseAuth */; };
@@ -56,6 +61,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3A4CB32E2CE3183800E0F924 /* signInButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signInButton.swift; sourceTree = "<group>"; };
+		3A4CB3322CE3297700E0F924 /* E-care-mobile-app-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "E-care-mobile-app-Info.plist"; sourceTree = SOURCE_ROOT; };
+		3A4CB3342CE35DD700E0F924 /* BioDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BioDataView.swift; sourceTree = "<group>"; };
 		3ABB39342CDF138400806D40 /* HealthDashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthDashboardView.swift; sourceTree = "<group>"; };
 		3ABB39372CDF19B700806D40 /* SelectADoctor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectADoctor.swift; sourceTree = "<group>"; };
 		3ABB393E2CDF256F00806D40 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -94,8 +102,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A4CB33C2CE35F6D00E0F924 /* PhoneNumberKit-Static in Frameworks */,
+				3A4CB3382CE35F4200E0F924 /* PhoneNumberKit in Frameworks */,
 				3ABB393B2CDF24E700806D40 /* FirebaseAuth in Frameworks */,
 				3ABB393D2CDF24E700806D40 /* FirebaseFirestoreCombine-Community in Frameworks */,
+				3A4CB33A2CE35F6D00E0F924 /* PhoneNumberKit-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,6 +127,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A4CB3332CE35D0F00E0F924 /* Profile Management */ = {
+			isa = PBXGroup;
+			children = (
+				3ABE15942CDE13DC0017417F /* ProfileView.swift */,
+				3A4CB3342CE35DD700E0F924 /* BioDataView.swift */,
+			);
+			path = "Profile Management";
+			sourceTree = "<group>";
+		};
 		3ABB39362CDF197E00806D40 /* Appointment management */ = {
 			isa = PBXGroup;
 			children = (
@@ -150,6 +170,7 @@
 		3ABE15422CDDD2BA0017417F /* E-care mobile app */ = {
 			isa = PBXGroup;
 			children = (
+				3A4CB3322CE3297700E0F924 /* E-care-mobile-app-Info.plist */,
 				3ABB393E2CDF256F00806D40 /* GoogleService-Info.plist */,
 				3ABE157E2CDE058F0017417F /* E-care mobile appRelease.entitlements */,
 				3ABE15432CDDD2BA0017417F /* E_care_mobile_appApp.swift */,
@@ -162,7 +183,6 @@
 				3ABE158A2CDE133E0017417F /* MainView.swift */,
 				3ABE158E2CDE13950017417F /* AddAppointmentView.swift */,
 				3ABE15902CDE13B40017417F /* NotificationsView.swift */,
-				3ABE15942CDE13DC0017417F /* ProfileView.swift */,
 				3ABB39342CDF138400806D40 /* HealthDashboardView.swift */,
 			);
 			path = "E-care mobile app";
@@ -171,6 +191,7 @@
 		3ABE15492CDDD2BB0017417F /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				3A4CB3332CE35D0F00E0F924 /* Profile Management */,
 				3ABB39362CDF197E00806D40 /* Appointment management */,
 				3ABE159F2CDE19790017417F /* Helth View */,
 				3ABE15962CDE17DB0017417F /* SignUp&Login */,
@@ -213,6 +234,7 @@
 				3ABE15992CDE18520017417F /* SignUpView.swift */,
 				3ABE159B2CDE18CF0017417F /* LoginView.swift */,
 				3ABE159D2CDE19250017417F /* PasswordRest.swift */,
+				3A4CB32E2CE3183800E0F924 /* signInButton.swift */,
 			);
 			path = "SignUp&Login";
 			sourceTree = "<group>";
@@ -244,6 +266,9 @@
 			packageProductDependencies = (
 				3ABB393A2CDF24E700806D40 /* FirebaseAuth */,
 				3ABB393C2CDF24E700806D40 /* FirebaseFirestoreCombine-Community */,
+				3A4CB3372CE35F4200E0F924 /* PhoneNumberKit */,
+				3A4CB3392CE35F6D00E0F924 /* PhoneNumberKit-Dynamic */,
+				3A4CB33B2CE35F6D00E0F924 /* PhoneNumberKit-Static */,
 			);
 			productName = "E-care mobile app";
 			productReference = 3ABE15402CDDD2BA0017417F /* E-care mobile app.app */;
@@ -319,6 +344,7 @@
 			mainGroup = 3ABE15372CDDD2BA0017417F;
 			packageReferences = (
 				3ABB39392CDF24E700806D40 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				3A4CB3362CE35F1200E0F924 /* XCRemoteSwiftPackageReference "PhoneNumberKit" */,
 			);
 			productRefGroup = 3ABE15412CDDD2BA0017417F /* Products */;
 			projectDirPath = "";
@@ -364,6 +390,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3ABB39462CDF62C300806D40 /* SelectDateView.swift in Sources */,
+				3A4CB32F2CE3183800E0F924 /* signInButton.swift in Sources */,
 				3ABE158F2CDE13950017417F /* AddAppointmentView.swift in Sources */,
 				3ABB39382CDF19B700806D40 /* SelectADoctor.swift in Sources */,
 				3ABE15462CDDD2BA0017417F /* ContentView.swift in Sources */,
@@ -382,6 +409,7 @@
 				3ABB39482CDF637E00806D40 /* AppointmentConfirmationView.swift in Sources */,
 				3ABE159E2CDE19250017417F /* PasswordRest.swift in Sources */,
 				3ABE15872CDE0EAA0017417F /* DateButton.swift in Sources */,
+				3A4CB3352CE35DD700E0F924 /* BioDataView.swift in Sources */,
 				3ABE159C2CDE18CF0017417F /* LoginView.swift in Sources */,
 				3ABE159A2CDE18520017417F /* SignUpView.swift in Sources */,
 			);
@@ -547,8 +575,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"E-care mobile app/Preview Content\"";
+				DEVELOPMENT_TEAM = 5398WQZSWC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "E-care-mobile-app-Info.plist";
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "We need to unlock your data";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Please allow access to upload pictures.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -576,8 +608,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"E-care mobile app/Preview Content\"";
+				DEVELOPMENT_TEAM = 5398WQZSWC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "E-care-mobile-app-Info.plist";
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "We need to unlock your data";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Please allow access to upload pictures.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -710,6 +746,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		3A4CB3362CE35F1200E0F924 /* XCRemoteSwiftPackageReference "PhoneNumberKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/marmelroy/PhoneNumberKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
 		3ABB39392CDF24E700806D40 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -721,6 +765,21 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		3A4CB3372CE35F4200E0F924 /* PhoneNumberKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3A4CB3362CE35F1200E0F924 /* XCRemoteSwiftPackageReference "PhoneNumberKit" */;
+			productName = PhoneNumberKit;
+		};
+		3A4CB3392CE35F6D00E0F924 /* PhoneNumberKit-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3A4CB3362CE35F1200E0F924 /* XCRemoteSwiftPackageReference "PhoneNumberKit" */;
+			productName = "PhoneNumberKit-Dynamic";
+		};
+		3A4CB33B2CE35F6D00E0F924 /* PhoneNumberKit-Static */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3A4CB3362CE35F1200E0F924 /* XCRemoteSwiftPackageReference "PhoneNumberKit" */;
+			productName = "PhoneNumberKit-Static";
+		};
 		3ABB393A2CDF24E700806D40 /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 3ABB39392CDF24E700806D40 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

@@ -1,6 +1,7 @@
 import SwiftUI
 import Firebase
 import FirebaseAuth
+import LocalAuthentication
 
 struct LoginView: View {
     @State private var mobileNumber = ""
@@ -9,7 +10,8 @@ struct LoginView: View {
     @State private var isLoading = false
     @State private var isLoggedIn = false  // State to control navigation to MainView
     @State private var isNavigatingToSignUp = false  // State to control navigation to SignUpView
-
+    @State private var isAuthenticated = false
+    @State private var showBiometricError = false
     var body: some View {
         Group {
             if isLoggedIn {
@@ -66,18 +68,26 @@ struct LoginView: View {
                 Text("or")
                     .foregroundColor(.gray)
 
-                Button(action: {
+               
                     // Continue with Apple action
-                }) {
-                    Label("Continue With Apple", systemImage: "applelogo")
-                        .foregroundColor(.white)
-                        .frame(maxWidth: .infinity)
-                        .padding()
-                        .background(Color.black)
-                        .cornerRadius(8)
-                }
+                    SignInButton()
+                    .frame(width: 250, height: 44)
 
                 Spacer()
+                // Biometric Authentication Buttons
+                HStack(spacing: 30) {
+                    Button(action: {
+                        authenticateWithFaceID()
+                    }) {
+                        Image(systemName: "faceid")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 60, height: 60)
+                    }
+                    
+                }
+
+                               Spacer()
 
                 NavigationLink(destination: SignUpView(isUserLoggedIn: $isLoggedIn), isActive: $isNavigatingToSignUp) {
                     Button(action: {
@@ -121,6 +131,28 @@ struct LoginView: View {
             }
         }
     }
+    
+    // Function to authenticate using FaceID
+        func authenticateWithFaceID() {
+            let context = LAContext()
+            var error: NSError?
+
+            if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
+                context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: "Authenticate using Face ID") { success, authenticationError in
+                    DispatchQueue.main.async {
+                        if success {
+                            isAuthenticated = true
+                            isLoggedIn = true // Navigate to MainView on successful authentication
+                        } else {
+                            showBiometricError = true // Show error if authentication fails
+                            errorMessage = "Face ID authentication failed."
+                        }
+                    }
+                }
+            } else {
+                errorMessage = "Face ID is not available on this device."
+            }
+        }
 }
 
 #Preview {

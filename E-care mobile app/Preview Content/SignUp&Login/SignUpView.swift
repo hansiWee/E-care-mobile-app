@@ -87,6 +87,10 @@ struct SignUpView: View {
                     .padding(.top, 10)
                     
                     Spacer()
+                    
+                    // Continue with Apple action
+                    SignInButton()
+                    .frame(width: 250, height: 44)
                 }
                 .padding()
                 .offset(y: offset) // Apply the offset for keyboard avoidance

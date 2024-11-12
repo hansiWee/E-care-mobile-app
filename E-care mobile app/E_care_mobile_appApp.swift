@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Firebase
+import PhoneNumberKit
 
 @main
 struct E_care_mobile_appApp: App {
